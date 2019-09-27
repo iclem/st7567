@@ -1,0 +1,17 @@
+[package]
+name = "st7567"
+version = "0.1.0"
+authors = ["Philippe GASSMANN <philoops@gmail.com>"]
+edition = "2018"
+repository = "https://github.com/zenria/st7567"
+description = "talk to st7567 using embedded-hal"
+keywords=["embedded", "gfx-hat", "gfxhat", "raspberry"]
+exclude = [
+    "*.iml",
+]
+license = "MIT OR Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+embedded-hal="0.2"
