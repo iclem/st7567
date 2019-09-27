@@ -145,10 +145,9 @@ impl<P: Pin, S: Write<u8>> ST7567<P, S> {
     pub fn clear(&mut self) {
         self.buf = [0; BUFFER_SIZE];
     }
-    // Set a single pixel in the  display buffer.
-    // :param x: X position (from 0 to 127)
-    // :param y: Y position (from 0 to 63)
-    // :param value: pixel state true = On, false = Off
+    /// Set a single pixel in the  display buffer.
+    ///
+    /// Ignore out of bound values for x & y
     pub fn set_pixel(&mut self, x: usize, y: usize, value: bool) {
         if x >= WIDTH as usize || y >= HEIGHT as usize {
             return;
