@@ -1,3 +1,8 @@
+//! ST7567 LCD Display driver for use with [`embedded-hal`]
+//!
+//! This LCD display is found on the Pimoroni GFX HAT for the
+//! Raspberry PI
+//!
 use embedded_hal::blocking::spi::Write;
 mod consts;
 
@@ -14,6 +19,7 @@ pub enum PinState {
     Low,
 }
 
+/// A control pin, typically used to model DC & RST pin of the ST7567 display
 pub trait Pin {
     type Error;
 
